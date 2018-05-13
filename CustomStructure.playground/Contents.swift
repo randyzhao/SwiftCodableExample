@@ -56,5 +56,5 @@ let coordinate = try! decoder.decode(Coordinate.self, from: json)
 
 let encoder = JSONEncoder()
 let jsonData = try! encoder.encode(coordinate)
-print(jsonData)
+print(String(data: jsonData, encoding: .utf8)!)
 
