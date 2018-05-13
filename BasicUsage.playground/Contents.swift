@@ -9,7 +9,7 @@ let json = """
     "name": "United States",
     "code": "US"
   },
-  "type": 3
+  "type": 2
 }
 """.data(using: .utf8)!
 
@@ -36,4 +36,8 @@ struct User: Codable {
 
 let decoder = JSONDecoder()
 let user = try! decoder.decode(User.self, from: json)
+
+let encoder = JSONEncoder()
+let jsonData = try! encoder.encode(user)
+print(jsonData)
 
