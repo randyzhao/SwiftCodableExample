@@ -39,5 +39,4 @@ let user = try! decoder.decode(User.self, from: json)
 
 let encoder = JSONEncoder()
 let jsonData = try! encoder.encode(user)
-print(jsonData)
-
+print(String(data: jsonData, encoding: .utf8)!)
