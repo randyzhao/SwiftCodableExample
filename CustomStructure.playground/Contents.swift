@@ -6,7 +6,7 @@ let json = """
 {
   "latitude": 12.0,
   "longitude": 13.0,
-  "additionalInfo": {
+  "additional_info": {
     "elevation": 456,
     "has_google_map": false
   }
@@ -22,7 +22,7 @@ struct Coordinate: Codable {
   private enum CodingKeys: String, CodingKey {
     case latitude
     case longitude
-    case additionalInfo
+    case additionalInfo = "additional_info"
   }
 
   private enum AdditionalInfoKeys: String, CodingKey {
